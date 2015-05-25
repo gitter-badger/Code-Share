@@ -24,10 +24,10 @@ const byte LR = 6, LV = 5, LM1 = A1, LM2 = A2, LM3 = A3, van = 4;
 byte pin_out[] = {LR, LV, LM1, LM2, LM3, van};
 
 const byte slaveSelect = 10, maxCount = 99;
-const byte timerClock = 2000, timer = 5, tempOn = 3, orange = 20, red = 60, redb = 99, eco = 35, hum = 35, rin = 30;
+const byte timerClock = 2000, timer = 10, tempOn = 3, orange = 30, red = 60, redb = 99, eco = 35, hum = 35, rin = 30;
  
 int millis0 = 0, calc, time, tps, time_mode, Clock, mode = 0, diffclock, access = 1;
-int mbE = 0, state = 0, md, ir_value, distance, a, i, conso, conso_temp, confirm, last, rcpt, user_last, user_secure, user;
+int mbE = 0, state = 0, md, ir_value, distance, a, i, c, d = 0, e = 0, f = 0, conso, conso_temp, confirm, last, rcpt, user_last, user_secure, user;
 
 int ir = A5;
 
@@ -71,7 +71,6 @@ void loop(){
 //Variables à valeur changeante
   time = millis()/1000;
   md = digitalRead(btn);
-  Clock = clock();
 
 //Appel de fonction
   modeSelect();
@@ -112,11 +111,13 @@ void loop(){
         state = 0;
         tps = 0;
         calc = 0;
+        d = 0;
+        e = 0;
+        f = 0;
+        c = 0;
+        rcpt = 0;
         access = 1;
-        if(Serial){
-          Serial.println(conso);       
-        }
-        
+        Serial.println(conso);               
       }
     }
   }
@@ -125,43 +126,56 @@ void loop(){
   if(state == 1){
    switch(mode){
     case 0: 
-        //sei();
         calc = conso;
-        //cli();
         displayNumber(calc);
         tricolor(orange, red, redb);
     break;
     case 1:
-        //sei();
         calc = (eco - conso);
-        //cli();
         displayNumber(calc);
         tricolor(eco/3*2, eco/3, 2);
+        if(eco/2-2 < calc && eco/2+2 > calc && d == 0){
+          detachInterrupt(0);
+          if(f == 0){
+            e = time;
+            f = 1;
+          }   
+          access = 0;
+          displayBlink();
+          if(time - e > 6 && d == 0){
+            attachInterrupt(0, rpm, RISING);
+            access = 1;
+            d = 1;
+            displayLight();
+          } 
+        }
         if (calc <= 0){
             access = 0;
         }
         break;
     case 2:
+      if(c <= 50){
+        mode = 0;
+        c = 0;
+      }
       if(rcpt == 0){
         Serial.println(-1);
         last = Serial.parseInt();
+        c++;
       }
       if(last > 0){
         rcpt = 1;
-      }
-      if(last > hum){
-        calc = (last*0.9 - conso);
-        tricolor(last*0.9/3*2, last*0.9/3, 2);
-        }else{
-        calc = (hum - conso);
-        tricolor(eco/3*2, eco/3, 2);
-      }
-      if (calc <= 0){
-        access = 0;
-      }
-      displayNumber(calc);   
-      }else{
-        mode = 0;
+        if(last > hum){
+          calc = (last*0.9 - conso);
+          tricolor(last*0.9/3*2, last*0.9/3, 2);
+          }else{
+          calc = (hum - conso);
+          tricolor(eco/3*2, eco/3, 2);
+        }
+        if (calc <= 0){
+          access = 0;
+        }
+        displayNumber(calc);   
       }
     break;
     }
@@ -186,7 +200,7 @@ void displayNumber( int number){
 
 //Fonction pour faire clignoter le digits
 void displayBlink(){
-  if(Clock){
+  if(clock()){
     digitalWrite(slaveSelect,LOW);
     sendCommand(10,2);
     digitalWrite(slaveSelect,HIGH);
@@ -201,7 +215,8 @@ void displayBlink(){
 void sendCommand( int command, int value){
   digitalWrite(slaveSelect,LOW);
   SPI.transfer(command);
-  SPI.transfer(value);
+  SPI.transfer(value);//test
+/**/
   digitalWrite(slaveSelect,HIGH);
 }
 
@@ -241,7 +256,7 @@ void color_set(int lv, int lr){
 //Fonction qui clignoter la led
 void led_blink(){
   digitalWrite(LV, LOW);
-  if(Clock == 1){
+  if(clock()){
     analogWrite(LR, 255);
   }else{
     analogWrite(LR, 25);
@@ -252,6 +267,7 @@ void led_blink(){
 void turn_On(){
   digitalWrite(slaveSelect,LOW);
   sendCommand(12,1);
+  sendCommand(10,2);
   digitalWrite(slaveSelect,HIGH);
   color_set(255,0);
 }
@@ -358,4 +374,10 @@ void modeLed2(){
       digitalWrite(LM3, HIGH);
     break;
   }
+}
+
+void displayLight(){
+  digitalWrite(slaveSelect,LOW);
+  sendCommand(10,2);
+  digitalWrite(slaveSelect,HIGH);
 }
