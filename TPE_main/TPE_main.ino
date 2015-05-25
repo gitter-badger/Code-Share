@@ -359,5 +359,3 @@ void modeLed2(){
     break;
   }
 }
-//test
-/**/
