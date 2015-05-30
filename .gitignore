@@ -1,2 +1,4 @@
 # Ignore sass-cache files.
-*.sass-cache\*
+**/.sass-cache
+**/.sass-cache/*
+**.sass-cache**
