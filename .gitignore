@@ -219,4 +219,4 @@ pip-log.txt
 ## Sass
 #########
 .sass-cache/
-*.scssc
+Web-Sentinelles/.sass-cache/
