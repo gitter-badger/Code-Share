@@ -6,3 +6,33 @@
 
 // Import Bootstrap for Sass
 @import "bootstrap";
+
+$main_color: rgb(99, 174, 221);
+
+.navbar{
+    border: none;
+    border-bottom: 5px solid $main_color;
+    border-radius: 0px;
+    background-color: white;
+    color: $main_color;
+    &-brand{
+        font-family: lobster;
+    }
+    &-footer{
+        padding-top: 5px;
+        width: 100%;
+        z-index: -1;
+        background-color: white;
+        border-bottom: 2px solid $main_color;
+        position: absolute;
+    }
+}
+
+.dropmenu{
+    &-menu{
+        list-style: none;
+        li{
+            display: inline;
+        } 
+    }
+}
