@@ -8581,19 +8581,40 @@ button.close {
 }
 /* line 21, ../sass/styles.scss */
 .navbar-footer {
-  padding-top: 5px;
+  top: 35px;
+  height: 28px;
   width: 100%;
   z-index: -1;
   background-color: white;
   border-bottom: 2px solid #63aedd;
   position: absolute;
+  -webkit-transition: all 2s, ease-in, 1s;
+  -o-transition: all 2s, ease-in, 1s;
+  transition: all 2s, ease-in, 1s;
+  -webkit-transform: translate(0px, -30px);
+  -ms-transform: translate(0px, -30px);
+  -o-transform: translate(0px, -30px);
+  transform: translate(0px, -30px);
+}
+/* line 33, ../sass/styles.scss */
+.navbar .dropped {
+  -webkit-transition: all 2s, ease-in, 1s;
+  -o-transition: all 2s, ease-in, 1s;
+  transition: all 2s, ease-in, 1s;
+  -webkit-transform: translate(0px, 30px);
+  -ms-transform: translate(0px, 30px);
+  -o-transform: translate(0px, 30px);
+  transform: translate(0px, 30px);
 }
 
-/* line 32, ../sass/styles.scss */
+/* line 40, ../sass/styles.scss */
 .dropmenu-menu {
+  margin: 0;
+  padding: 0;
+  text-align: center;
   list-style: none;
 }
-/* line 34, ../sass/styles.scss */
+/* line 45, ../sass/styles.scss */
 .dropmenu-menu li {
   display: inline;
 }
