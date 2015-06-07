@@ -10,6 +10,7 @@
 $main_color: rgb(99, 174, 221);
 
 .navbar{
+    z-index: 1;
     border: none;
     border-bottom: 5px solid $main_color;
     border-radius: 0px;
@@ -23,17 +24,22 @@ $main_color: rgb(99, 174, 221);
         //padding-top: 5px;
         height: 28px;
         width: 100%;
-        z-index: -1;
         background-color: white;
         border-bottom: 2px solid $main_color;
         position: absolute;
-        @include transition( all 2s, ease-in, 1s);
-        @include translate( 0px, -30px);
+        @include transition( all, 1s, ease-in, 0.5s);
+        @include translate( 0px, 0px);
+        display: table;
+        ul{
+            display:table-cell; 
+            vertical-align:middle; 
+        }
     }
-    .dropped{
-        @include transition( all 2s, ease-in, 1s);
-        @include translate( 0px, 30px);
-    }
+}
+
+.dropped{
+    @include transition( all, 1s, ease-in, 0.5s);
+    @include translate( 0px, 30px);
 }
 
 .dropmenu{
@@ -46,4 +52,8 @@ $main_color: rgb(99, 174, 221);
             display: inline;
         } 
     }
+}
+
+.container{
+    @include transition( all, 1s, ease-in, 0.5s);
 }

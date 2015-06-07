@@ -8569,52 +8569,66 @@ button.close {
 }
 /* line 12, ../sass/styles.scss */
 .navbar {
+  z-index: 1;
   border: none;
   border-bottom: 5px solid #63aedd;
   border-radius: 0px;
   background-color: white;
   color: #63aedd;
 }
-/* line 18, ../sass/styles.scss */
+/* line 19, ../sass/styles.scss */
 .navbar-brand {
   font-family: lobster;
 }
-/* line 21, ../sass/styles.scss */
+/* line 22, ../sass/styles.scss */
 .navbar-footer {
   top: 35px;
   height: 28px;
   width: 100%;
-  z-index: -1;
   background-color: white;
   border-bottom: 2px solid #63aedd;
   position: absolute;
-  -webkit-transition: all 2s, ease-in, 1s;
-  -o-transition: all 2s, ease-in, 1s;
-  transition: all 2s, ease-in, 1s;
-  -webkit-transform: translate(0px, -30px);
-  -ms-transform: translate(0px, -30px);
-  -o-transform: translate(0px, -30px);
-  transform: translate(0px, -30px);
+  -webkit-transition: all, 1s, ease-in, 0.5s;
+  -o-transition: all, 1s, ease-in, 0.5s;
+  transition: all, 1s, ease-in, 0.5s;
+  -webkit-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  -o-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+  display: table;
 }
 /* line 33, ../sass/styles.scss */
-.navbar .dropped {
-  -webkit-transition: all 2s, ease-in, 1s;
-  -o-transition: all 2s, ease-in, 1s;
-  transition: all 2s, ease-in, 1s;
+.navbar-footer ul {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* line 40, ../sass/styles.scss */
+.dropped {
+  -webkit-transition: all, 1s, ease-in, 0.5s;
+  -o-transition: all, 1s, ease-in, 0.5s;
+  transition: all, 1s, ease-in, 0.5s;
   -webkit-transform: translate(0px, 30px);
   -ms-transform: translate(0px, 30px);
   -o-transform: translate(0px, 30px);
   transform: translate(0px, 30px);
 }
 
-/* line 40, ../sass/styles.scss */
+/* line 46, ../sass/styles.scss */
 .dropmenu-menu {
   margin: 0;
   padding: 0;
   text-align: center;
   list-style: none;
 }
-/* line 45, ../sass/styles.scss */
+/* line 51, ../sass/styles.scss */
 .dropmenu-menu li {
   display: inline;
+}
+
+/* line 57, ../sass/styles.scss */
+.container {
+  -webkit-transition: all, 1s, ease-in, 0.5s;
+  -o-transition: all, 1s, ease-in, 0.5s;
+  transition: all, 1s, ease-in, 0.5s;
 }
