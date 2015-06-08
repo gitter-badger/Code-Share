@@ -5905,30 +5905,30 @@ tbody.collapse.in {
 }
 /* line 401, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.4.1/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-brand {
-  color: #777;
+  color: #63aedd;
 }
 /* line 403, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.4.1/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
-  color: #5e5e5e;
+  color: #3998d4;
   background-color: transparent;
 }
 /* line 410, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.4.1/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-text {
-  color: #777;
+  color: #63aedd;
 }
 /* line 415, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.4.1/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-nav > li > a {
-  color: #777;
+  color: #63aedd;
 }
 /* line 418, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.4.1/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-  color: #333;
+  color: #3998d4;
   background-color: transparent;
 }
 /* line 425, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.4.1/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-  color: #555;
-  background-color: #e7e7e7;
+  color: #3998d4;
+  background-color: transparent;
 }
 /* line 433, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.4.1/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-nav > .disabled > a, .navbar-default .navbar-nav > .disabled > a:hover, .navbar-default .navbar-nav > .disabled > a:focus {
@@ -5937,15 +5937,15 @@ tbody.collapse.in {
 }
 /* line 442, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.4.1/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-toggle {
-  border-color: #ddd;
+  border-color: #63aedd;
 }
 /* line 444, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.4.1/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-  background-color: #ddd;
+  background-color: whitesmoke;
 }
 /* line 448, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.4.1/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-toggle .icon-bar {
-  background-color: #888;
+  background-color: #63aedd;
 }
 /* line 453, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.4.1/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-collapse,
@@ -5954,23 +5954,23 @@ tbody.collapse.in {
 }
 /* line 462, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.4.1/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
-  background-color: #e7e7e7;
-  color: #555;
+  background-color: transparent;
+  color: #3998d4;
 }
 @media (max-width: 767px) {
   /* line 473, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.4.1/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-    color: #777;
+    color: #63aedd;
   }
   /* line 475, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.4.1/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-    color: #333;
+    color: #3998d4;
     background-color: transparent;
   }
   /* line 482, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.4.1/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-    color: #555;
-    background-color: #e7e7e7;
+    color: #3998d4;
+    background-color: transparent;
   }
   /* line 490, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.4.1/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:focus {
@@ -5980,19 +5980,19 @@ tbody.collapse.in {
 }
 /* line 506, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.4.1/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-link {
-  color: #777;
+  color: #63aedd;
 }
 /* line 508, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.4.1/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-link:hover {
-  color: #333;
+  color: #3998d4;
 }
 /* line 513, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.4.1/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .btn-link {
-  color: #777;
+  color: #63aedd;
 }
 /* line 515, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.4.1/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .btn-link:hover, .navbar-default .btn-link:focus {
-  color: #333;
+  color: #3998d4;
 }
 /* line 521, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.4.1/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .btn-link[disabled]:hover, .navbar-default .btn-link[disabled]:focus, fieldset[disabled] .navbar-default .btn-link:hover, fieldset[disabled] .navbar-default .btn-link:focus {
@@ -8567,7 +8567,7 @@ button.close {
     display: none !important;
   }
 }
-/* line 12, ../sass/styles.scss */
+/* line 10, ../sass/styles.scss */
 .navbar {
   z-index: 1;
   border: none;
@@ -8576,11 +8576,12 @@ button.close {
   background-color: white;
   color: #63aedd;
 }
-/* line 19, ../sass/styles.scss */
+/* line 17, ../sass/styles.scss */
 .navbar-brand {
+  font-size: 28px;
   font-family: lobster;
 }
-/* line 22, ../sass/styles.scss */
+/* line 21, ../sass/styles.scss */
 .navbar-footer {
   top: 35px;
   height: 28px;
@@ -8588,22 +8589,25 @@ button.close {
   background-color: white;
   border-bottom: 2px solid #63aedd;
   position: absolute;
-  -webkit-transition: all, 1s, ease-in, 0.5s;
-  -o-transition: all, 1s, ease-in, 0.5s;
-  transition: all, 1s, ease-in, 0.5s;
-  -webkit-transform: translate(0px, 0px);
-  -ms-transform: translate(0px, 0px);
-  -o-transform: translate(0px, 0px);
-  transform: translate(0px, 0px);
   display: table;
 }
-/* line 33, ../sass/styles.scss */
+/* line 30, ../sass/styles.scss */
 .navbar-footer ul {
   display: table-cell;
   vertical-align: middle;
 }
 
-/* line 40, ../sass/styles.scss */
+/* line 36, ../sass/styles.scss */
+#dropper {
+  -webkit-transition: all, 1s, ease-in, 0.5s;
+  -o-transition: all, 1s, ease-in, 0.5s;
+  transition: all, 1s, ease-in, 0.5s;
+  position: absolute;
+  width: 100%;
+  top: 0px;
+}
+
+/* line 43, ../sass/styles.scss */
 .dropped {
   -webkit-transition: all, 1s, ease-in, 0.5s;
   -o-transition: all, 1s, ease-in, 0.5s;
@@ -8614,21 +8618,19 @@ button.close {
   transform: translate(0px, 30px);
 }
 
-/* line 46, ../sass/styles.scss */
+/* line 49, ../sass/styles.scss */
 .dropmenu-menu {
   margin: 0;
   padding: 0;
   text-align: center;
   list-style: none;
 }
-/* line 51, ../sass/styles.scss */
+/* line 54, ../sass/styles.scss */
 .dropmenu-menu li {
   display: inline;
 }
 
-/* line 57, ../sass/styles.scss */
-.container {
-  -webkit-transition: all, 1s, ease-in, 0.5s;
-  -o-transition: all, 1s, ease-in, 0.5s;
-  transition: all, 1s, ease-in, 0.5s;
+/* line 60, ../sass/styles.scss */
+#main-container {
+  padding-top: 70px;
 }

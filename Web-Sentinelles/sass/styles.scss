@@ -7,8 +7,6 @@
 // Import Bootstrap for Sass
 @import "bootstrap";
 
-$main_color: rgb(99, 174, 221);
-
 .navbar{
     z-index: 1;
     border: none;
@@ -17,6 +15,7 @@ $main_color: rgb(99, 174, 221);
     background-color: white;
     color: $main_color;
     &-brand{
+        font-size: 28px;
         font-family: lobster;
     }
     &-footer{
@@ -27,14 +26,18 @@ $main_color: rgb(99, 174, 221);
         background-color: white;
         border-bottom: 2px solid $main_color;
         position: absolute;
-        @include transition( all, 1s, ease-in, 0.5s);
-        @include translate( 0px, 0px);
         display: table;
         ul{
             display:table-cell; 
             vertical-align:middle; 
         }
     }
+}
+#dropper{
+    @include transition( all, 1s, ease-in, 0.5s);
+    position: absolute;
+    width: 100%;
+    top: 0px;
 }
 
 .dropped{
@@ -54,6 +57,6 @@ $main_color: rgb(99, 174, 221);
     }
 }
 
-.container{
-    @include transition( all, 1s, ease-in, 0.5s);
+#main-container{
+    padding-top: 70px;
 }

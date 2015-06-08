@@ -1,17 +1,18 @@
 $(function(){
-    var drop1 = 0;
-    var drop2 = 0;
+    var look = 0;
     $('.dropmenu').hover(function(){
-        $('.navbar-footer').addClass('dropped');
-        $('.container').addClass('dropped');
-    }, function(){
-        $('.navbar-nav li').not('.dropmenu').hover(function(){
-            $('.navbar-footer').removeClass('dropped');
-            $('.container').removeClass('dropped');
+        $('#dropper').addClass('dropped');
+    },function(){
+        $('.navbar-footer').hover(function(){
+            look = 1;
+        },function(){
+            look = 0;
+            $('#dropper').removeClass('dropped');
         });
-        $('.navbar-footer').mouseleave(function(){
-            $('.navbar-footer').removeClass('dropped');
-            $('.container').removeClass('dropped');
-        });
+        setTimeout(function(){
+            if(look == 0){
+                $('#dropper').removeClass('dropped');
+            };
+        },1000);
     });
 });
